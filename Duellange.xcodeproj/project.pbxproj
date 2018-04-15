@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		77FF6A94207E9AD50031DB51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6A93207E9AD50031DB51 /* AppDelegate.swift */; };
-		77FF6A96207E9AD50031DB51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6A95207E9AD50031DB51 /* ViewController.swift */; };
 		77FF6A99207E9AD60031DB51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FF6A97207E9AD60031DB51 /* Main.storyboard */; };
 		77FF6A9C207E9AD60031DB51 /* Duellange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6A9A207E9AD60031DB51 /* Duellange.xcdatamodeld */; };
 		77FF6A9E207E9AD60031DB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77FF6A9D207E9AD60031DB51 /* Assets.xcassets */; };
 		77FF6AA1207E9AD60031DB51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FF6A9F207E9AD60031DB51 /* LaunchScreen.storyboard */; };
+		77FF6AA9207E9EF20031DB51 /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6AA8207E9EF20031DB51 /* MainScreenVC.swift */; };
+		77FF6AAB207EA8620031DB51 /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6AAA207EA8620031DB51 /* signUpVC.swift */; };
+		77FF6AAD207EA8760031DB51 /* signInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6AAC207EA8760031DB51 /* signInVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		77FF6A90207E9AD50031DB51 /* Duellange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duellange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FF6A93207E9AD50031DB51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		77FF6A95207E9AD50031DB51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		77FF6A98207E9AD60031DB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		77FF6A9B207E9AD60031DB51 /* Duellange.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Duellange.xcdatamodel; sourceTree = "<group>"; };
 		77FF6A9D207E9AD60031DB51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77FF6AA0207E9AD60031DB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77FF6AA2207E9AD60031DB51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77FF6AA8207E9EF20031DB51 /* MainScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		77FF6AAA207EA8620031DB51 /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
+		77FF6AAC207EA8760031DB51 /* signInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signInVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		77FF6A92207E9AD50031DB51 /* Duellange */ = {
 			isa = PBXGroup;
 			children = (
+				77FF6AA8207E9EF20031DB51 /* MainScreenVC.swift */,
+				77FF6AAA207EA8620031DB51 /* signUpVC.swift */,
+				77FF6AAC207EA8760031DB51 /* signInVC.swift */,
 				77FF6A93207E9AD50031DB51 /* AppDelegate.swift */,
-				77FF6A95207E9AD50031DB51 /* ViewController.swift */,
 				77FF6A97207E9AD60031DB51 /* Main.storyboard */,
 				77FF6A9D207E9AD60031DB51 /* Assets.xcassets */,
 				77FF6A9F207E9AD60031DB51 /* LaunchScreen.storyboard */,
@@ -139,9 +145,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77FF6A96207E9AD50031DB51 /* ViewController.swift in Sources */,
+				77FF6AAB207EA8620031DB51 /* signUpVC.swift in Sources */,
+				77FF6AA9207E9EF20031DB51 /* MainScreenVC.swift in Sources */,
 				77FF6A9C207E9AD60031DB51 /* Duellange.xcdatamodeld in Sources */,
 				77FF6A94207E9AD50031DB51 /* AppDelegate.swift in Sources */,
+				77FF6AAD207EA8760031DB51 /* signInVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
