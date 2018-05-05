@@ -104,6 +104,9 @@
                                 <state key="normal" title="sign up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="testDatabase:" destination="4x1-up-qSi" eventType="touchUpInside" id="O9k-uZ-fQv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exf-IE-Y23">
                                 <rect key="frame" x="286" y="20" width="73" height="30"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class signUpVC: UIViewController {
     @IBOutlet var goBackBtn: UIButton!
@@ -17,10 +18,11 @@ class signUpVC: UIViewController {
     @IBOutlet var emailTxt: UITextField!
     @IBOutlet var passTxt: UITextField!
     
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        ref = Database.database().reference()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +30,10 @@ class signUpVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func testDatabase(_ sender: UIButton) {
+        self.ref.child("Posts").childByAutoId().setValue(["name": nameTxt.text])
+    }
+    
     /*
     // MARK: - Navigation
 
