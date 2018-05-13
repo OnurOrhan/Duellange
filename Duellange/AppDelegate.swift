@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import Firebase
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        /*let authListener = Auth.auth().addStateDidChangeListener { (auth, user) in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            if user != nil {
+                let controller = storyboard.instantiateViewController(withIdentifier: "homeVC")
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            } else {
+                let controller = storyboard.instantiateViewController(withIdentifier: "MainScreenVC")
+                self.window?.rootViewController = controller
+                self.window?.makeKeyAndVisible()
+            }
+        }*/
         return true
     }
 

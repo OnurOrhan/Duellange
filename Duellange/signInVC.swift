@@ -32,9 +32,12 @@ class signInVC: UIViewController {
     
     @IBAction func signIn(_ sender: Any) {
         if let email = emailTxt.text, let pass = passTxt.text{
-            Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
-                self.performSegue(withIdentifier: "signInHome", sender: self)
-            })
+            if pass.count >= 6 {
+                Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+                    self.performSegue(withIdentifier: "signInHome", sender: self)
+                })
+            }
+            
         }
     }
     

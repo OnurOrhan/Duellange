@@ -15,11 +15,21 @@ class homeVC: UIViewController {
     
     @IBOutlet var mainTitle: UILabel!
     @IBOutlet var centerLabel: UILabel!
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        if let u = Auth.auth().currentUser {
+            self.user = u
+            if let text = u.displayName {
+                self.mainTitle.text = "Welcome \(u.displayName!)!"
+            } else {
+                self.mainTitle.text = "Welcome!"
+            }
+        } else {
+            self.mainTitle.text = "Welcome!"
+        }
     }
 
     override func didReceiveMemoryWarning() {

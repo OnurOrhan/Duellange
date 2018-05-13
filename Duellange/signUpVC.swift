@@ -43,17 +43,35 @@ class signUpVC: UIViewController {
     
     @IBAction func signUp(_ sender: Any) {
         if let email = emailTxt.text, let pass = passTxt.text, let pass2 = repeatTxt.text {
-            if pass == pass2/*, isValidEmail(str:email)*/ {
-                //let name = emailFirstPart(str:email)
+            if !isValidEmail(str:email){
+                let emailAlert = UIAlertController(title: "Invalid Email Format", message: "Please enter a valid email format.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.emailTxt.text = ""
+                })
+                emailAlert.addAction(ok)
+                self.present(emailAlert, animated: true, completion: nil)
+                
+            } else if pass.count < 6 {
+                let passwordAlert = UIAlertController(title: "Short Password", message: "Please enter a password at least 6 characters long.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                    self.passTxt.text = ""
+                    self.repeatTxt.text = ""
+                })
+                passwordAlert.addAction(ok)
+                self.present(passwordAlert, animated: true, completion: nil)
+                
+            } else if pass == pass2 {
+                let name = emailFirstPart(str:email)
                 Auth.auth().createUser(withEmail: email, password: pass, completion: { (user, error) in
-                    if user != nil {
-                        /*let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                        changeRequest?.displayName = name
-                        changeRequest?.commitChanges { (error) in
-                            // ...
-                        }*/
+                    if let u = user {
+                        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                         changeRequest?.displayName = name
+                         changeRequest?.commitChanges { (error) in
+                         // ...
+                         }
                         self.performSegue(withIdentifier: "signUpHome", sender: self)
                     }
+                    
                 })
             }
         }
