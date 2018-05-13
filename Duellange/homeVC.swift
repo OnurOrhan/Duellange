@@ -1,22 +1,24 @@
 //
-//  MainScreenVC.swift
+//  homeVC.swift
 //  Duellange
 //
-//  Created by Onur Orhan on 11.04.2018.
+//  Created by Onur Orhan on 13.05.2018.
 //  Copyright © 2018 Duellange. All rights reserved.
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class MainScreenVC: UIViewController {
-    @IBOutlet var mainTitle: UILabel!
+class homeVC: UIViewController {
+    @IBOutlet var signOutBtn: UIButton!
     
-    @IBOutlet var signUpBtn: UIButton!
-    @IBOutlet var signInBtn: UIButton!
+    @IBOutlet var mainTitle: UILabel!
+    @IBOutlet var centerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
     }
 
@@ -25,7 +27,15 @@ class MainScreenVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func signOut(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            self.performSegue(withIdentifier: "signOutMain", sender: self)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

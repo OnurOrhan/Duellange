@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		497D1EDF08CD1F78C2AF4484 /* Pods_Duellange.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BD0E2F50CC31B21E66E1FD4 /* Pods_Duellange.framework */; };
 		77D296622089FAFF000D3D55 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77D296612089FAF0000D3D55 /* GoogleService-Info.plist */; };
+		77DC360420A85B2E0052D56E /* homeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DC360320A85B2E0052D56E /* homeVC.swift */; };
 		77FF6A94207E9AD50031DB51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6A93207E9AD50031DB51 /* AppDelegate.swift */; };
 		77FF6A99207E9AD60031DB51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77FF6A97207E9AD60031DB51 /* Main.storyboard */; };
 		77FF6A9C207E9AD60031DB51 /* Duellange.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 77FF6A9A207E9AD60031DB51 /* Duellange.xcdatamodeld */; };
@@ -23,6 +24,7 @@
 		1BD0E2F50CC31B21E66E1FD4 /* Pods_Duellange.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Duellange.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		222A4E9F889B833B3FA66A75 /* Pods-Duellange.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Duellange.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Duellange/Pods-Duellange.debug.xcconfig"; sourceTree = "<group>"; };
 		77D296612089FAF0000D3D55 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77DC360320A85B2E0052D56E /* homeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeVC.swift; sourceTree = "<group>"; };
 		77FF6A90207E9AD50031DB51 /* Duellange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Duellange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77FF6A93207E9AD50031DB51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77FF6A98207E9AD60031DB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				77FF6AA8207E9EF20031DB51 /* MainScreenVC.swift */,
 				77FF6AAA207EA8620031DB51 /* signUpVC.swift */,
 				77FF6AAC207EA8760031DB51 /* signInVC.swift */,
+				77DC360320A85B2E0052D56E /* homeVC.swift */,
 				77FF6A93207E9AD50031DB51 /* AppDelegate.swift */,
 				77FF6A97207E9AD60031DB51 /* Main.storyboard */,
 				77FF6A9D207E9AD60031DB51 /* Assets.xcassets */,
@@ -221,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77FF6AAB207EA8620031DB51 /* signUpVC.swift in Sources */,
+				77DC360420A85B2E0052D56E /* homeVC.swift in Sources */,
 				77FF6AA9207E9EF20031DB51 /* MainScreenVC.swift in Sources */,
 				77FF6A9C207E9AD60031DB51 /* Duellange.xcdatamodeld in Sources */,
 				77FF6A94207E9AD50031DB51 /* AppDelegate.swift in Sources */,

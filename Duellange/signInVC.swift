@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class signInVC: UIViewController {
     @IBOutlet var goBackBtn: UIButton!
     @IBOutlet var signInBtn: UIButton!
+    
+    @IBOutlet var mainTitle: UILabel!
     
     @IBOutlet var emailTxt: UITextField!
     @IBOutlet var passTxt: UITextField!
@@ -26,7 +30,14 @@ class signInVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func signIn(_ sender: Any) {
+        if let email = emailTxt.text, let pass = passTxt.text{
+            Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+                self.performSegue(withIdentifier: "signInHome", sender: self)
+            })
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
