@@ -69,7 +69,9 @@ class signUpVC: UIViewController {
                          changeRequest?.commitChanges { (error) in
                          // ...
                          }
-                        self.performSegue(withIdentifier: "signUpHome", sender: self)
+                        Auth.auth().signIn(withEmail: email, password: pass, completion: { (user, error) in
+                            self.performSegue(withIdentifier: "signUpHome", sender: self)
+                        })
                     }
                     
                 })
